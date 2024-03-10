@@ -1,0 +1,8 @@
+{
+    "body": {
+        "welcome": "Welcome"
+    },
+    "header" : {
+        "searchPlaceholder": "Search"
+    }
+}
