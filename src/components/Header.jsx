@@ -36,7 +36,7 @@ const Header = () => {
             pageName !== 'video' && (
               <div className="flex items-center md:hidden" onClick={() => setMobileMenu((prev) => !prev)}>
                 {
-                  mobileMenu ? <SlMenu /> : <CgClose />
+                  mobileMenu ? <CgClose /> : <SlMenu />
                 }
               </div>
             )

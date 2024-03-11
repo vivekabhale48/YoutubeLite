@@ -2,9 +2,11 @@ import React, { useContext } from 'react'
 import LeftNavMenuItem from './LeftNavMenuItem';
 import { categories } from '../utils/constants';
 import { Context } from '../context/contextApi'
+import { useNavigate } from 'react-router-dom';
 
 const LeftNav = () => {
   const { mobileMenu, selectedCategory, setSelectedCategory } = useContext(Context);
+  const navigate = useNavigate();
 
   const onClickHandler = (type, name) => {
     switch (type) {
@@ -23,7 +25,7 @@ const LeftNav = () => {
   }
 
   return (
-    <div className={`md:block overflow-y-auto absolute md:relative z-10 w-[250px] h-[calc(100vh-60px)] translate-x-[-250px] md:translate-x-0 transition-all ${mobileMenu ? '' : 'translate-x-0'}`}>
+    <div className={`md:block overflow-y-auto absolute md:relative z-10 w-[250px] h-[calc(100vh-60px)] translate-x-[-250px] md:translate-x-0 transition-all ${mobileMenu ? 'translate-x-0' : ''}`}>
       <div className='p-3'>
         {
           categories.map((data, index) => (
@@ -33,6 +35,7 @@ const LeftNav = () => {
                 icon={data.icon}
                 action={() => {
                   onClickHandler(data.type, data.name);
+                  navigate('/');
                 }}
                 className={`${selectedCategory === data.name ? "bg-white/[0.15]" : ""}`}
               />
