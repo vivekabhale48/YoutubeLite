@@ -25,7 +25,7 @@ const LeftNav = () => {
   }
 
   return (
-    <div className={`md:block overflow-y-auto absolute md:relative z-10 w-[250px] h-[calc(100vh-60px)] translate-x-[-250px] md:translate-x-0 transition-all ${mobileMenu ? 'translate-x-0' : ''}`}>
+    <div className={`left-nav md:block overflow-y-auto absolute md:relative z-10 w-[250px] h-[calc(100vh-60px)] md:translate-x-0 transition-all ${mobileMenu ? 'translate-x-0' : 'translate-x-[-250px]'}`}>
       <div className='p-3'>
         {
           categories.map((data, index) => (
