@@ -5,7 +5,7 @@ import { Context } from '../context/contextApi'
 import { useNavigate } from 'react-router-dom';
 
 const LeftNav = () => {
-  const { mobileMenu, selectedCategory, setSelectedCategory } = useContext(Context);
+  const { mobileMenu, selectedCategory, setSelectedCategory, t } = useContext(Context);
   const navigate = useNavigate();
 
   const onClickHandler = (type, name) => {
@@ -24,6 +24,10 @@ const LeftNav = () => {
     }
   }
 
+  const tranlateCategoryName = (name) => {
+    return t(`leftNav.categories.${name}`)
+  }
+
   return (
     <div className={`left-nav md:block overflow-y-auto absolute md:relative z-10 w-[250px] h-[calc(100vh-60px)] md:translate-x-0 transition-all ${mobileMenu ? 'translate-x-0' : 'translate-x-[-250px]'}`}>
       <div className='p-3'>
@@ -31,7 +35,7 @@ const LeftNav = () => {
           categories.map((data, index) => (
             <React.Fragment key={index}>
               <LeftNavMenuItem
-                name={data.type === 'home' ? 'Home' : data.name}
+                name={data.type === 'home' ? 'Home' : tranlateCategoryName(data.name)}
                 icon={data.icon}
                 action={() => {
                   onClickHandler(data.type, data.name);

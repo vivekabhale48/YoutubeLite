@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import { AiFillHome, AiOutlineFlag } from "react-icons/ai";
 import { MdLocalFireDepartment, MdLiveTv } from "react-icons/md";
@@ -9,7 +9,6 @@ import { ImNewspaper } from "react-icons/im";
 import { GiDiamondTrophy, GiEclipse } from "react-icons/gi";
 import { RiLightbulbLine, RiFeedbackLine } from "react-icons/ri";
 import { FiSettings, FiHelpCircle } from "react-icons/fi";
-import { Context } from "../context/contextApi";
 
 export const categories = [
     { name: "New", icon: <AiFillHome />, type: "home" },

@@ -2,7 +2,25 @@
     "body": {
         "welcome": "Welcome"
     },
-    "header" : {
+    "header": {
         "searchPlaceholder": "Search"
+    },
+    "leftNav": {
+        "categories": {
+            "New": "New",
+            "Trending": "Trending",
+            "Music": "Music",
+            "Films": "Films",
+            "Live": "Live",
+            "Gaming": "Gaming",
+            "News": "News",
+            "Sports": "Sports",
+            "Learning": "Learning",
+            "Fashion & beauty": "Fashion & beauty",
+            "Settings": "Settings",
+            "Report History": "Report History",
+            "Help": "Help",
+            "Send feedback": "Send feedback"
+        }
     }
 }

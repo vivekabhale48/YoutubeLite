@@ -4,5 +4,23 @@
     },
     "header" : {
         "searchPlaceholder": "buscar"
+    },
+    "leftNav": {
+        "categories": {
+            "New": "Nuevo",
+            "Trending": "Tendencias",
+            "Music": "Música",
+            "Films": "Películas",
+            "Live": "En Vivo",
+            "Gaming": "Juegos",
+            "News": "Noticias",
+            "Sports": "Deportes",
+            "Learning": "Aprendizaje",
+            "Fashion & beauty": "Moda y belleza",
+            "Settings": "Configuración",
+            "Report History": "Historial de reportes",
+            "Help": "Ayuda",
+            "Send feedback": "Enviar retroalimentación"
+        }
     }
 }

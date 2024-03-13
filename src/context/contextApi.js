@@ -12,8 +12,9 @@ export const ApiContext = (props) => {
 
     useEffect(()=>{
         console.log("hii");
+        console.log(selectedCategory)
         fetchSelectedCategoryData(selectedCategory);
-    }, []); 
+    }, [selectedCategory]); 
 
     const fetchSelectedCategoryData = async(query) =>{
         setLoading(true);
