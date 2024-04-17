@@ -48,7 +48,6 @@ const Header = () => {
                 src="/yt-logo.png"
                 alt="yt_logo"
               />
-              <img className="w-[30px] h-[20px] md:hidden block" src="/yt-logo-mobile.png" alt="yt-mobile" />
             </div>
           </Link>
         </div>
@@ -81,17 +80,17 @@ const Header = () => {
             <IoIosSearch className="text-white text-xl" />
           </button>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center max-sm:gap-x-1 max-md:gap-x-2 gap-x-8">
           <LangToggle />
-          <div className="hidden md:flex">
-            <div className="flex items-center justify-center h-10 w-10 rounded-full hover:bg-[#303030]/[0.6]">
+          <div className="hidden md:flex gap-x-8">
+            <div className="flex items-center justify-center rounded-full hover:bg-[#303030]/[0.6]">
               <RiVideoAddLine className="text-white text-xl cursor-pointer" />
             </div>
-            <div className="flex items-center justify-center ml-2 h-10 w-10 rounded-full hover:bg-[#303030]/[0.6]">
+            <div className="flex items-center justify-center rounded-full hover:bg-[#303030]/[0.6]">
               <FiBell className="text-white text-xl cursor-pointer" />
             </div>
           </div>
-          <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4">
+          <div className="flex h-8 w-8 overflow-hidden rounded-full max-sm:h-6 max-sm:w-6">
             <img src="https://xsgames.co/randomusers/assets/avatars/female/67.jpg" />
           </div>
         </div>

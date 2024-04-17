@@ -7,7 +7,7 @@ export const ApiContext = (props) => {
     const[loading, setLoading] = useState(false);
     const[searchResults, setSearchResults] = useState(true);
     const[selectedCategory, setSelectedCategory] = useState("New");
-    const[mobileMenu, setMobileMenu] = useState(true);
+    const[mobileMenu, setMobileMenu] = useState(false);
     const[t, i18n] = useTranslation("global");
 
     useEffect(()=>{
