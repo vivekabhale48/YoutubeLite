@@ -10,13 +10,13 @@ const LangToggle = () => {
         checked ? i18n.changeLanguage('en') : i18n.changeLanguage('es');
     }
     return (
-        <div className='flex justify-center items-center gap-x-2'>
+        <div className='flex justify-center items-center gap-x-2 max-sm:gap-x-1'>
             {
-                checked ? (<span className='text-white'>En</span>) : (<span className='text-white'>Es</span>)
+                checked ? (<span className='text-white max-sm:text-[14px]'>En</span>) : (<span className='text-white max-sm:text-[14px]'>Es</span>)
             }
-            <label className="switch mr-5 relative inline-block w-[40px] h-[20px]">
+            <label className="switch inline-block flex items-center justify-center max-sm:h-auto max-sm:w-auto">
                 <input checked={checked} type="checkbox" className='hidden' onChange={() => handleLanguageToggle()} />
-                <span className="slider absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-[#a4a3a3] rounded-[10px] after:content-[''] after:absolute after:h-[16px] after:w-[15px] after:bg-white after:top-[2px] after:left-[2px] after:rounded-[50%] transition-all duration-300 after:transition-all after:duration-300" />
+                <span className="slider relative cursor-pointer w-[40px] h-[20px] bg-[#a4a3a3] rounded-[10px] after:content-[''] after:absolute after:h-[16px] after:w-[15px] after:bg-white after:top-[2px] after:left-[2px] after:rounded-[50%] transition-all duration-300 after:transition-all after:duration-300 max-sm:w-[30px] max-sm:h-[15px] max-sm:after:w-[13px] max-sm:after:h-[13px] max-sm:after:top-[1px]" />
             </label>
         </div>
     )
