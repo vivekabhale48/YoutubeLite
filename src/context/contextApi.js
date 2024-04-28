@@ -5,23 +5,20 @@ export const Context = createContext();
 
 export const ApiContext = (props) => {
     const[loading, setLoading] = useState(false);
-    const[searchResults, setSearchResults] = useState(true);
+    const[searchResults, setSearchResults] = useState("");
     const[selectedCategory, setSelectedCategory] = useState("New");
     const[mobileMenu, setMobileMenu] = useState(false);
     const[t, i18n] = useTranslation("global");
 
     useEffect(()=>{
-        console.log("hii");
-        console.log(selectedCategory)
         fetchSelectedCategoryData(selectedCategory);
     }, [selectedCategory]); 
 
     const fetchSelectedCategoryData = async(query) =>{
         setLoading(true);
         try {
-            // const { contents } = await fetchDataFromApi(`search/?q=${query}`);
-            // console.log(contents);
-            // setSearchResults(contents)
+            const { contents } = await fetchDataFromApi(`search/?q=${query}`);
+            setSearchResults(contents)
             setLoading(false);
         } catch (error) {
             console.log(error)
