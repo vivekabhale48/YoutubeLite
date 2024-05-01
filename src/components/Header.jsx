@@ -12,13 +12,14 @@ import LangToggle from "../translations/LangToggle";
 const Header = () => {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
-  const { loading, mobileMenu, setMobileMenu, t } = useContext(Context);
+  const { loading, mobileMenu, setMobileMenu, t, setSelectedCategory } = useContext(Context);
   const placeholderText = t("header.searchPlaceholder");
   const searchQueryHandler = (event) => {
     if (
       (event?.key === "Enter" || event === "clicked") &&
       searchQuery?.length > 0
     ) {
+      setSelectedCategory(searchQuery)
       navigate(`/searchResults/${searchQuery}`);
     }
   };

@@ -17,11 +17,12 @@ export const ApiContext = (props) => {
     const fetchSelectedCategoryData = async(query) =>{
         setLoading(true);
         try {
-            const { contents } = await fetchDataFromApi(`search/?q=${query}`);
-            setSearchResults(contents)
+            // const { contents } = await fetchDataFromApi(`search/?q=${query}`);
+            // setSearchResults(contents)
             setLoading(false);
         } catch (error) {
             console.log(error)
+            setLoading(false);
         }
     }
 

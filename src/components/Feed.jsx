@@ -13,7 +13,6 @@ const Feed = () => {
           {
           !loading && searchResults && searchResults.map((content)=>{
               if(content.type !== 'video') return false;
-              console.log(content);
               return(
                 <VideoCard 
                 key={content?.video?.videoId}
