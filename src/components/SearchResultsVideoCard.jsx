@@ -4,13 +4,13 @@ import { BsFillCheckCircleFill } from 'react-icons/bs'
 
 const SearchResultsVideoCard = ({ video }) => {
     return (
-        <div className='flex mb-4'>
-            <div className='max-w-[500px] w-[100%] max-h-[280px] mr-4'>
+        <div className='search-results-page grid mb-4 gap-x-4'>
+            <div className='max-w-[500px] w-[100%] max-h-[280px]'>
                 <img className='h-full w-full object-cover rounded-[16px]' src={video?.thumbnails[0]?.url} alt="" />
             </div>
             <div className='flex flex-col'>
                 <div className='flex flex-col'>
-                    <span className='text-[18px]'>{video?.title}</span>
+                    <span className='text-[18px] max-sm:line-clamp-2'>{video?.title}</span>
                     <div className='text-[12px] font-semibold text-white/[0.7] flex items-center mt-1'>
                         {
                             video?.stats?.views && (
@@ -40,7 +40,7 @@ const SearchResultsVideoCard = ({ video }) => {
                         </div>
                     </div>
                 </div>
-                <div className='text-[12px]'>
+                <div className='text-[12px] max-sm:line-clamp-2'>
                     {
                         video?.descriptionSnippet
                     }

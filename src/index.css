@@ -82,3 +82,6 @@ input[type="checkbox"]:checked + .slider::after {
 .left-nav::-webkit-scrollbar {
     display: none;
 }
+.search-results-page {
+    grid-template-columns: 1fr 1fr;
+}
