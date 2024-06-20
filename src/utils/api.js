@@ -10,6 +10,9 @@ const options = {
   }
 };
 
+//getting called from contextApi and after calling final url becomes
+// BASE_URL/search/?q=${query}
+//This query you get is the keywords on left nav like New, Trending etc
 export const fetchDataFromApi = async (url) => {
     const { data } = await axios.get(`${BASE_URL}/${url}`, options);
     return data;
