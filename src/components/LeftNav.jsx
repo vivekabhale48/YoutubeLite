@@ -24,7 +24,7 @@ const LeftNav = () => {
     }
   }
 
-  const tranlateCategoryName = (name) => {
+  const translateCategoryName = (name) => {
     return t(`leftNav.categories.${name}`)
   }
 
@@ -35,7 +35,7 @@ const LeftNav = () => {
           categories.map((data, index) => (
             <React.Fragment key={index}>
               <LeftNavMenuItem
-                name={data.type === 'home' ? 'Home' : tranlateCategoryName(data.name)}
+                name={data.type === 'home' ? 'Home' : translateCategoryName(data.name)}
                 icon={data.icon}
                 action={() => {
                   onClickHandler(data.type, data.name);

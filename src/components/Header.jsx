@@ -33,15 +33,11 @@ const Header = () => {
         {loading && <Loader />}
 
         <div className="flex items-center gap-x-3">
-          {
-            pageName !== 'video' && (
-              <div className="flex items-center md:hidden" onClick={() => setMobileMenu((prev) => !prev)}>
-                {
-                  mobileMenu ? <CgClose /> : <SlMenu />
-                }
-              </div>
-            )
-          }
+          <div className="flex items-center md:hidden" onClick={() => setMobileMenu((prev) => !prev)}>
+            {
+              mobileMenu ? <CgClose /> : <SlMenu />
+            }
+          </div>
           <Link to={"/"}>
             <div className="">
               <img
