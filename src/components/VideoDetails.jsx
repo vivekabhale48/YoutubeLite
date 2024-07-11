@@ -12,7 +12,7 @@ import LeftNav from "./LeftNav";
 const VideoDetails = () => {
   const [video, setVideo] = useState();
   const [similarVideo, setSimilarVideo] = useState();
-  const { setLoading } = useContext(Context);
+  const { setLoading, setMobileMenu } = useContext(Context);
   const params = useParams();
   const id = params.videoId;
   useEffect(()=>{
@@ -39,8 +39,11 @@ const VideoDetails = () => {
 
   return (
     <div className='flex absolute top-[60px] bottom-0 left-0 right-0'>
-      <LeftNav />
-      <div>Video Details</div>
+      <LeftNav/>
+      <div className="flex-1">
+        <div></div>
+        <div></div>
+      </div>
     </div>
   )
 }
