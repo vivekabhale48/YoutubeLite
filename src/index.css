@@ -85,3 +85,10 @@ input[type="checkbox"]:checked + .slider::after {
 .search-results-page {
     grid-template-columns: 1fr 1fr;
 }
+.line-clamp2-css {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
